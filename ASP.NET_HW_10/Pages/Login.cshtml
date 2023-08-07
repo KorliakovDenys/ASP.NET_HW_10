@@ -1,0 +1,26 @@
+@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<h2>Login form</h2>
+
+<form method="post">
+    <div class="form-control mt-2">
+        <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input type="text" id="emailInput" name="email" class="form-control">
+        </div>
+        <div class="form-group mt-2">
+            <label for="passwordInput">Password</label>
+            <input type="password" id="passwordInput" name="password" class="form-control">
+        </div>
+        <div class="mt-2 mb-2">
+            <button type="submit" value="/Login" class="btn btn-primary">Log In</button>
+        </div>
+    </div>
+</form>

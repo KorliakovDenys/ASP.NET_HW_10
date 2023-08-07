@@ -1,0 +1,38 @@
+@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model ASP.NET_HW_9.Pages.Cart.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CartPosition</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CartPosition.Amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CartPosition.Amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CartPosition.User)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CartPosition.User.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CartPosition.Product)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CartPosition.Product.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.CartPosition?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
